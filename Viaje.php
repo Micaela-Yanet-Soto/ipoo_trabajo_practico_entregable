@@ -23,7 +23,7 @@ class Viaje{
     private $codigo;
     private $destino;
     private $cantidadMaximaPasajero;
-    private $pasajerosAbordo;// hace una referencia a una lista de pasajeros
+    private $pasajeros;// hace una referencia a una lista de pasajeros
     
 
     // Medoto constructor
@@ -32,7 +32,7 @@ class Viaje{
         $this-> codigo = $idPasaje;
         $this-> destino =$destin;
         $this-> cantidadMaximaPasajero = $cantMaxPasj;
-        $this-> pasajerosAbordo = $abordo;
+        $this-> pasajeros = $abordo;
         
     }
     // Consultores u observadores
@@ -45,8 +45,8 @@ class Viaje{
     public function get_cantidad_maxima_pasajeros(){
         return $this->cantidadMaximaPasajero;
     }
-    public function get_pasajeros_abordo(){
-        return $this->pasajerosAbordo;
+    public function get_pasajeros(){
+        return $this->pasajeros;
 
     }
     
@@ -61,8 +61,8 @@ class Viaje{
     public function set_cantidad_maxima_pasajeros($maxPasajero){
         $this->cantidadMaximaPasajero = $maxPasajero;
     }
-    public function set_pasajeros_abordo($pasajeros){
-        $this->pasajerosAbordo = $pasajeros;
+    public function set_pasajeros($pasaj){
+        $this->pasajeros = $pasaj;
     }
     
 
