@@ -72,7 +72,8 @@ class Viaje{
         $informacionViaje = "El viaje correspondiente al siguiente codigo ".$this ->get_codigo().
                             "\ntiene como destino ir a ".$this ->get_destino().
                             "\ncon una cantidad maxima de pasajeros permitido de: ".$this ->get_cantidad_maxima_pasajeros().
-                            "\nSe detallan a continuacion los datos de los pasajeros abordo\n";
+                            "\nSe detallan a continuacion los datos de los pasajeros abordo\n".$this->muestra_datos_pasajeros();
+        
         
         // Recorrera el arreglo para mostrar los datos de los pasajeros a bordo
         $pasajerosDatos = $this-> get_pasajeros_abordo();
@@ -85,6 +86,18 @@ class Viaje{
         }
 
         return $informacionViaje;
+    }
+    //Muestra la informacion de los pasajeros 
+    public function muestra_datos_pasajeros(){
+        $pasaj= $this->get_pasajeros();
+        $info ="";
+        foreach ($pasaj as $pasaj => $value) {
+            $info= "Pasajero\n";
+            foreach ($value as $key => $valor) {
+                $info= $info."\n".$key." : ".$valor;
+            }
+        }
+        $info;
     }
 
     // Modifica codigo
