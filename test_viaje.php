@@ -1,5 +1,10 @@
 <?php
 /**
+ * Alumno: Soto Micaela Yanet
+ * Legajo: Fai-1391
+ * Carrera: Tecnicatura Universitaria en Desarrollo Web
+ */
+/**
  * -------------------------CONSIGNA DEL TEST VIAJE ------------------
  * Implementar un script testViaje.php que cree una instancia clase viaje y presente un menu
  * que permita:
