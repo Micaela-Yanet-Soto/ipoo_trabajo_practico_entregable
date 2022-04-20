@@ -73,9 +73,7 @@ class Viaje{
                             "\ntiene como destino ir a ".$this ->get_destino().
                             "\ncon una cantidad maxima de pasajeros permitido de: ".$this ->get_cantidad_maxima_pasajeros().
                             "\nSe detallan a continuacion los datos de los pasajeros abordo\n".$this->muestra_datos_pasajeros();
-        
-        
-
+    
         return $informacionViaje;
     }
     //Muestra la informacion de los pasajeros 
