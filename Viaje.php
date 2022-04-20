@@ -24,16 +24,16 @@ class Viaje{
     private $destino;
     private $cantidadMaximaPasajero;
     private $pasajerosAbordo;// hace una referencia a una lista de pasajeros
-    private $cantPasajeroAbordo;
+    
 
     // Medoto constructor
 
-    public function __construct ($idPasaje, $destin, $cantMaxPasj , $abordo,$cant){
+    public function __construct ($idPasaje, $destin, $cantMaxPasj , $abordo){
         $this-> codigo = $idPasaje;
         $this-> destino =$destin;
         $this-> cantidadMaximaPasajero = $cantMaxPasj;
         $this-> pasajerosAbordo = $abordo;
-        $this-> cantPasajeroAbordo = $cant;
+        
     }
     // Consultores u observadores
     public function get_codigo(){
@@ -49,10 +49,7 @@ class Viaje{
         return $this->pasajerosAbordo;
 
     }
-    public function get_cantidad_pasajeros_abordo(){
-        return $this->cantPasajeroAbordo;
-
-    }
+    
     // Modificadores
 
     public function set_codigo($id){
@@ -67,9 +64,7 @@ class Viaje{
     public function set_pasajeros_abordo($pasajeros){
         $this->pasajerosAbordo = $pasajeros;
     }
-    public function set_cantidad_pasajeros_abordo($cantPas){
-        $this->cantPasajeroAbordo = $cantPas;
-    }
+    
 
     // Metodo toString
 
@@ -77,7 +72,6 @@ class Viaje{
         $informacionViaje = "El viaje correspondiente al siguiente codigo ".$this ->get_codigo().
                             "\ntiene como destino ir a ".$this ->get_destino().
                             "\ncon una cantidad maxima de pasajeros permitido de: ".$this ->get_cantidad_maxima_pasajeros().
-                            "\nllevando abordo una cantidad en total de ".$this ->get_cantidad_pasajeros_abordo()." pasajeros.".
                             "\nSe detallan a continuacion los datos de los pasajeros abordo\n";
         
         // Recorrera el arreglo para mostrar los datos de los pasajeros a bordo
