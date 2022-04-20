@@ -75,15 +75,6 @@ class Viaje{
                             "\nSe detallan a continuacion los datos de los pasajeros abordo\n".$this->muestra_datos_pasajeros();
         
         
-        // Recorrera el arreglo para mostrar los datos de los pasajeros a bordo
-        $pasajerosDatos = $this-> get_pasajeros_abordo();
-        foreach ($pasajerosDatos as $pasajerosDatos => $value) {
-            $informacionViaje=$informacionViaje."Pasajero \n ";
-            foreach ($value as $key => $datosP) {
-                $informacionViaje=$informacionViaje."\n".$key." : ".$datosP;
-            }
-            $informacionViaje="\n".$informacionViaje."\n";
-        }
 
         return $informacionViaje;
     }
