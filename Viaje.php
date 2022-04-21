@@ -86,7 +86,7 @@ class Viaje{
                 $info= $info."\n".$key." : ".$valor;
             }
         }
-        $info;
+        return $info;
     }
 
     // Modifica codigo
